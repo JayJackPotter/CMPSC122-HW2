@@ -85,8 +85,7 @@ int main()
 	srand(seed);													//Seed the random number generator
 	
 	cout << "Testing TVector<double>" << endl;
-	for (int i = 0; i < 2; i++)
-	{
+
 		//Double test
 		// test constructors
 		TVector<double> vd1;             check<string>(num_tests, num_failed, vd1.ToString(), "(0,0)", "double test 01 - default constructor");
@@ -118,9 +117,7 @@ int main()
 		TVector<double> vd15(1, 1);
 		check<bool>(num_tests, num_failed, (vd7 == vd15), false, "double test 15 - operator ==");
 		check<bool>(num_tests, num_failed, (vd7 != vd15), true, "double test 16 - operator !=");
-	}
-	for (int i = 0; i < 2; i++)
-	{
+
 		//float test
 		// test constructors
 		TVector<float> vf1;             check<string>(num_tests, num_failed, vf1.ToString(), "(0,0)", "float test 01 - default constructor");
@@ -152,8 +149,7 @@ int main()
 		TVector<float> vf15(3, 5);
 		check<bool>(num_tests, num_failed, (vf7 == vf15), false, "float  test 15 - operator ==");
 		check<bool>(num_tests, num_failed, (vf7 != vf15), true, "float test 16 - operator !=");
-	}
-	/*
+
 	//Int test
 	// test constructors
 	TVector<int> vi1;             check<string>(num_tests, num_failed, vi1.ToString(), "(0,0)", "int test 01 - default constructor");
@@ -217,7 +213,7 @@ int main()
 	TVector<short> vs16(3, 5);
 	check<bool>(num_tests, num_failed, (vs7 == vs16), false, "short test 16 - operator ==");
 	check<bool>(num_tests, num_failed, (vs7 != vs16), true, "short test 17 - operator !=");
-	*/
+	
 	// print test results
 	if (num_failed == 0)
 		cout << endl << "passed all " << num_tests << " test cases" << endl;
